@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
     "Fitting model adjust:",input$adjust))
   
   output$plot <- renderPlot({
-    hist(sample(), prob=T, breaks=100, col="green", main="Generated sample and fitted model", ylab="Probability", xlab="Value",)
+    hist(sample(), prob=T, breaks=100, col="green", main="Generated sample and fitted model", ylab="Probability", xlab="Value")
     lines(density(sample(), adjust=input$adjust), col="blue", lwd=2)
   })
   
